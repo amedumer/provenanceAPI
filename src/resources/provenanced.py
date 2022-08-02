@@ -70,7 +70,7 @@ class ProvenancedResource(Resource):
             elif action == "faucet":
 
                 result = subprocess.check_output(["/root/flask-api-starter-kit/src/faucet.sh",address])
-                return {"to":address,"amount":"10000","tx":str(result.splitlines()[2])}
+                return {"to":address,"amount":"100000","tx":str(result.splitlines()[2])}
 
         except Exception as e:
             print(e)
