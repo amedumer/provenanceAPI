@@ -13,6 +13,8 @@ services:
     ports:
       - 3000:3000
     command: python src/server.py
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
   dbdata:
     image: busybox
